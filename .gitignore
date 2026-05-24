@@ -5,6 +5,33 @@ backend/*.db
 # Backend environment
 backend/.env
 
+# Python virtual envs
+.venv/
+venv/
+env/
+
+# Node
+node_modules/
+
+# OS files
+.DS_Store
+
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+
+# Logs
+*.log
+
+# Editor directories and files
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Lock files (optional)
+package-lock.json
+yarn.lock
+
 # Python
 __pycache__/
 *.pyc
