@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@theme {
+  --color-background: #0f172a;
+  --color-surface: #1e293b;
+  --color-primary: #3b82f6;
+  --color-secondary: #8b5cf6;
+  --color-accent: #f43f5e;
+  --color-textMain: #f8fafc;
+  --color-textMuted: #94a3b8;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-textMain);
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    background-color: color-mix(in srgb, var(--color-surface) 80%, transparent);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.75rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  
+  .btn-primary {
+    background-image: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+    color: white;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn-primary:hover {
+    background-image: linear-gradient(to right, color-mix(in srgb, var(--color-primary) 90%, transparent), color-mix(in srgb, var(--color-secondary) 90%, transparent));
+    box-shadow: 0 10px 15px -3px color-mix(in srgb, var(--color-primary) 20%, transparent);
+    transform: translateY(-0.125rem);
+  }
+}
