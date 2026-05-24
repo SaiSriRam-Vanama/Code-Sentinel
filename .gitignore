@@ -1,5 +1,9 @@
 # Local database
 codesentinel_v3.db
+backend/*.db
+
+# Backend environment
+backend/.env
 
 # Python
 __pycache__/
