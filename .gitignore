@@ -1,0 +1,15 @@
+# Local database
+codesentinel_v3.db
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Environment files
+backend/.env
+.env
+
+# IDE/editor
+.vscode/
+*.swp
