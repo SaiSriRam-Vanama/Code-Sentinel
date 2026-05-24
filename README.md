@@ -41,7 +41,7 @@ Example system flow (Mermaid flowchart):
 flowchart LR
   PR[Pull Request / Webhook] -->|HTTP| Backend[Backend API]
   Frontend -->|REST| Backend
-  Backend -->|run| Analyzer[Analyzers (Bandit, Semgrep)]
+  Backend -->|run| Analyzer["Analyzers (Bandit, Semgrep)"]
   Analyzer -->|results| Backend
   Backend -->|store| Database[(Database)]
   Backend -->|post review| GitHub[GitHub API]
